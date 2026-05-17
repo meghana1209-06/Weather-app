@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Weather Pro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="top-controls">
+            <button onclick="toggleDarkMode()">🌙 Dark Mode</button>
+            <button onclick="getLocation()"><i class="fas fa-location-crosshairs"></i> Near Me</button>
+        </div>
+
+        <h1>Weather Pro <i class="fas fa-volume-up"></i></h1>
+
+        <div id="adviceBox" class="advice-card advice-hidden">
+            <i class="fas fa-wand-magic-sparkles"></i> <span id="adviceText"></span>
+        </div>
+
+        <div class="search-box">
+            <input type="text" id="cityInput" placeholder="Enter city, state, or country...">
+            <button type="button" onclick="getWeather()">Search</button>
+            <button type="button" id="voiceSearchBtn" aria-label="Search by voice" title="Search by voice">
+                <i class="fas fa-microphone"></i>
+            </button>
+        </div>
+        <p id="voiceStatus" class="voice-status">Tap the mic and say a city name.</p>
+
+        <div id="forecastContainer"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
